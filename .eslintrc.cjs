@@ -7,6 +7,7 @@ module.exports = {
     'plugin:react/recommended',
     'standard-with-typescript',
     'eslint-config-prettier',
+    'plugin:prettier/recommended',
   ],
   overrides: [],
   parserOptions: {
@@ -18,5 +19,6 @@ module.exports = {
   rules: {
     semi: 0,
     'comma-dangle': ['error', 'always-multiline'],
+    'prettier/prettier': 'error',
   },
 };
