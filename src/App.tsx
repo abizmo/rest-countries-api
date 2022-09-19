@@ -1,5 +1,5 @@
-function App() {
-  return <h1>REST Countries API with color theme switcher</h1>;
-}
+import React from 'react';
+
+const App = (): JSX.Element => <h1>App</h1>;
 
 export default App;
