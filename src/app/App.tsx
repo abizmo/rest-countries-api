@@ -1,7 +1,12 @@
 import React from 'react';
 
 import './App.css';
+import { Countries } from './country/components/Countries/Countries';
 
-const App = (): JSX.Element => <h1>App</h1>;
+const App = (): JSX.Element => (
+  <div>
+    <Countries />
+  </div>
+);
 
 export default App;
