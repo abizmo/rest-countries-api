@@ -1,4 +1,5 @@
 export interface CountryDTO {
+  cioc: string;
   flags: {
     png: string;
   };
