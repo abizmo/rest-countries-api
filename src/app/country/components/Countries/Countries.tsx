@@ -1,7 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
+
 import { Country } from '../../domain/country.model';
 import { countryService } from '../../domain/country.service';
 import { countryInstance } from '../../infrastructure/country.instance';
+
+import styles from './Countries.module.css';
 
 export const Countries: React.FC = () => {
   const [countries, setCountries] = useState<Country[]>([]);
@@ -20,24 +23,30 @@ export const Countries: React.FC = () => {
   }, []);
 
   return (
-    <ul>
+    <ul className={styles.container} role='list'>
       {countries.map((country) => (
         <li key={country.code}>
-          <div>
-            <img src={country.flag} alt={country.name} />
-            <div>
-              <h3>{country.name}</h3>
-              <ul>
-                <li>
-                  <span>Population: </span>
-                  {country.population}
+          <div className={styles.card}>
+            <img
+              src={country.flag}
+              alt={country.name}
+              className={styles.cardImage}
+            />
+            <div className={styles.cardBody}>
+              <h3 className={`${styles.cardTitle} | bold fs-600`}>
+                {country.name}
+              </h3>
+              <ul className={styles.cardDetails} role='list'>
+                <li className='fs-400'>
+                  <span className='medium'>Population: </span>
+                  {country.population.toLocaleString()}
                 </li>
                 <li>
-                  <span>Region: </span>
+                  <span className='medium'>Region: </span>
                   {country.region}
                 </li>
                 <li>
-                  <span>Capital: </span>
+                  <span className='medium'>Capital: </span>
                   {country.capital}
                 </li>
               </ul>
