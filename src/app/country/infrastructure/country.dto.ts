@@ -1,7 +1,7 @@
 export interface CountryDTO {
   cioc: string;
   flags: {
-    png: string;
+    svg: string;
   };
   name: {
     common: string;

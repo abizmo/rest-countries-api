@@ -12,7 +12,7 @@ export const countryRepository = (client: Http): CountryRepository => ({
       return countries.map(
         ({ flags, name, population, region, capital, cioc }: CountryDTO) => ({
           code: cioc,
-          flag: flags.png,
+          flag: flags.svg,
           name: name.common,
           population,
           region,
@@ -32,7 +32,7 @@ export const countryRepository = (client: Http): CountryRepository => ({
 
       return countries.map((country: CountryDTO) => ({
         code: country.cioc,
-        flag: country.flags.png,
+        flag: country.flags.svg,
         name: country.name.common,
         population: country.population,
         region: country.region,
