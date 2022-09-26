@@ -25,7 +25,7 @@ export const Countries: React.FC = () => {
   return (
     <ul className={styles.container} role='list'>
       {countries.map((country) => (
-        <li key={country.code}>
+        <li key={country.name}>
           <div className={styles.card}>
             <img
               src={country.flag}
