@@ -13,7 +13,7 @@ const App = (): JSX.Element => {
       <main>
         <Router>
           <Routes>
-            <Route path='/'>
+            <Route path='/rest-countries-api/'>
               <Route index element={<Home />} />
               <Route path='country/:code' element={<Country />} />
             </Route>
