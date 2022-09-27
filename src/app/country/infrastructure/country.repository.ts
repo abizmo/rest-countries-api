@@ -9,6 +9,7 @@ export const countryRepository = (client: Http): CountryRepository => ({
     try {
       const countries = await client.get<CountryDTO[]>(`${BASE_URL}/all`);
 
+      console.log('hola', countries);
       return countries.map(
         ({ flags, name, population, region, capital, cioc }: CountryDTO) => ({
           code: cioc,
