@@ -11,10 +11,13 @@ const App = (): JSX.Element => {
     <>
       <header>where in the world?</header>
       <main>
-        <BrowserRouter basename='/'>
+        <BrowserRouter>
           <Routes>
-            <Route path='/country/:code' element={<Country />} />
-            <Route path='/' element={<Home />} />
+            <Route
+              path='/rest-countries-api/country/:code'
+              element={<Country />}
+            />
+            <Route path='/rest-countries-api' element={<Home />} />
           </Routes>
         </BrowserRouter>
       </main>
