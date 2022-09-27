@@ -3,7 +3,7 @@ import React from 'react';
 import Home from './pages/Home';
 
 import './App.css';
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Route, HashRouter, Routes } from 'react-router-dom';
 import { Country } from './country/components/Country/Country';
 
 const App = (): JSX.Element => {
@@ -11,15 +11,12 @@ const App = (): JSX.Element => {
     <>
       <header>where in the world?</header>
       <main>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
-            <Route
-              path='/rest-countries-api/country/:code'
-              element={<Country />}
-            />
-            <Route path='/rest-countries-api' element={<Home />} />
+            <Route path='/country/:code' element={<Country />} />
+            <Route path='/' element={<Home />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </main>
       <footer>footer</footer>
     </>
