@@ -10,8 +10,8 @@ export const countryRepository = (client: Http): CountryRepository => ({
       const countries = await client.get<CountryDTO[]>(`${BASE_URL}/all`);
 
       return countries.map(
-        ({ flags, name, population, region, capital, cioc }: CountryDTO) => ({
-          code: cioc,
+        ({ flags, name, population, region, capital, cca3 }: CountryDTO) => ({
+          code: cca3,
           flag: flags.svg,
           name: name.common,
           population,
@@ -31,7 +31,7 @@ export const countryRepository = (client: Http): CountryRepository => ({
       );
 
       return countries.map((country: CountryDTO) => ({
-        code: country.cioc,
+        code: country.cca3,
         flag: country.flags.svg,
         name: country.name.common,
         population: country.population,

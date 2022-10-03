@@ -1,5 +1,5 @@
 export interface CountryDTO {
-  cioc: string;
+  cca3: string;
   flags: {
     svg: string;
   };
