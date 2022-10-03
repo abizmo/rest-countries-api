@@ -1,4 +1,5 @@
 export interface CountryDTO {
+  cca3: string;
   flags: {
     png: string;
   };
