@@ -1,7 +1,7 @@
 export interface CountryDTO {
   cca3: string;
   flags: {
-    svg: string;
+    png: string;
   };
   name: {
     common: string;
