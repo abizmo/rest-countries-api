@@ -13,7 +13,7 @@ const App = (): JSX.Element => {
       <main>
         <HashRouter>
           <Routes>
-            <Route path='/country/:code' element={<Country />} />
+            <Route path='/country/:countryCode' element={<Country />} />
             <Route path='/' element={<Home />} />
           </Routes>
         </HashRouter>

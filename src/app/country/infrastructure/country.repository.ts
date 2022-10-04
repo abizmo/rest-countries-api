@@ -46,7 +46,6 @@ export const countryRepository = (client: Http): CountryRepository => ({
       }))[0];
     } catch (err) {
       console.error(err);
-      return {};
     }
   },
 });
