@@ -20,11 +20,11 @@ export const Country = (): JSX.Element => {
     } catch (err) {
       console.error(err);
     }
-  }, []);
+  }, [countryCode]);
 
   useEffect(() => {
     void getCountry();
-  }, []);
+  }, [countryCode]);
 
   if (country == null) return <p>loading...</p>;
 
@@ -80,8 +80,8 @@ export const Country = (): JSX.Element => {
           <div className={style.countryBorders}>
             <h3 className='medium fs-600'>Border Countries:</h3>
             <div className='borders'>
-              {country.borders.map((border) => (
-                <Link key={border} to={`${border}`} relative='path'>
+              {country.borders?.map((border) => (
+                <Link key={border} to={`../country/${border}`}>
                   {border}
                 </Link>
               ))}
