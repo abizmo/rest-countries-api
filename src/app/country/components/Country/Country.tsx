@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { Button } from '../../../shared/components';
 
 import type { Country as CountryType } from '../../domain/country.model';
 import { countryService } from '../../domain/country.service';
@@ -31,9 +32,9 @@ export const Country = (): JSX.Element => {
 
   return (
     <div>
-      <button onClick={() => navigate(-1)} className={style.backButton}>
-        back
-      </button>
+      <Button size='big' onClick={() => navigate(-1)}>
+        <i className='fa-solid fa-arrow-left'></i> Back
+      </Button>
       <div className={style.countryContainer}>
         <img
           src={country.flag}
@@ -82,11 +83,11 @@ export const Country = (): JSX.Element => {
           </div>
           <div className={style.countryBorders}>
             <h3 className='medium fs-600'>Border Countries:</h3>
-            <div className='borders'>
+            <div className={style.borders}>
               {country.borders?.map((border) => (
-                <Link key={border} to={`../country/${border}`}>
+                <Button key={border} to={`../country/${border}`}>
                   {border}
-                </Link>
+                </Button>
               ))}
             </div>
           </div>
