@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 import type { Country as CountryType } from '../../domain/country.model';
 import { countryService } from '../../domain/country.service';
@@ -10,6 +10,7 @@ import style from './Country.module.css';
 export const Country = (): JSX.Element => {
   const [country, setCountry] = useState<CountryType>();
   const { countryCode } = useParams();
+  const navigate = useNavigate();
 
   const getCountry = useCallback(async () => {
     try {
@@ -30,7 +31,9 @@ export const Country = (): JSX.Element => {
 
   return (
     <div>
-      <button className={style.backButton}>back</button>
+      <button onClick={() => navigate(-1)} className={style.backButton}>
+        back
+      </button>
       <div className={style.countryContainer}>
         <img
           src={country.flag}
