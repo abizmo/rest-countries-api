@@ -69,7 +69,7 @@ export const Country = (): JSX.Element => {
             <ul role='list'>
               <li>
                 <span className='medium'>Top Level Domain: </span>
-                {country.tld}
+                {country.tld.join(' ')}
               </li>
               <li>
                 <span className='medium'>Currencies: </span>
