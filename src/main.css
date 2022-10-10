@@ -22,7 +22,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-a:not([class]) {
+a {
   text-decoration: none;
 }
 

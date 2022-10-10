@@ -1,0 +1,26 @@
+.countryContainer {
+}
+
+.countryFlag {
+  margin-bottom: 3rem;
+  box-shadow: 2px 2px 4px var(--clr-shadow);
+}
+
+.countryDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.countryBorders {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.borders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}

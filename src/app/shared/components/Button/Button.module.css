@@ -1,0 +1,22 @@
+.button {
+  align-items: center;
+  background-color: var(--clr-elements);
+  border: none;
+  border-radius: 0.125rem;
+  box-shadow: 0px 4px 8px var(--clr-shadow);
+  color: var(--clr-text);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.buttonSmall {
+  font-size: var(--fs-300);
+  min-width: 6rem;
+}
+
+.buttonBig {
+  font-size: var(--fs-400);
+  padding-inline: 1.5rem;
+}
