@@ -7,13 +7,14 @@
   --clr-neutral-100: hsl(0, 0%, 100%);
 
   --clr-elements: var(--clr-neutral-100);
-  --clr-bg: var(--clr-neutral-100);
+  --clr-bg: var(--clr-neutral-200);
   --clr-text: var(--clr-neutral-900);
   --clr-input: var(--clr-neutral-500);
-  --clr-shadow: hsla(200, 15%, 8%, 0.6);
+  --clr-shadow: hsla(200, 15%, 8%, 0.12);
 
   --ff-sans: 'Nunito Sans', sans-serif;
 
+  --fs-800: 1.5rem;
   --fs-700: 1.375rem;
   --fs-600: 1.125rem;
   --fs-500: 1rem;
@@ -32,12 +33,14 @@
     --clr-elements: var(--clr-neutral-700);
     --clr-bg: var(--clr-neutral-800);
     --clr-text: var(--clr-neutral-100);
+    --clr-shadow: hsla(200, 15%, 8%, 0.6);
   }
 
   [data-theme='light'] {
     --clr-elements: var(--clr-neutral-100);
     --clr-bg: var(--clr-neutral-200);
     --clr-text: var(--clr-neutral-900);
+    --clr-shadow: hsla(200, 15%, 8%, 0.12);
   }
 }
 
@@ -45,6 +48,7 @@
   --clr-elements: var(--clr-neutral-700);
   --clr-bg: var(--clr-neutral-800);
   --clr-text: var(--clr-neutral-100);
+  --clr-shadow: hsla(200, 15%, 8%, 0.6);
 }
 
 body {
@@ -97,6 +101,10 @@ body {
 
 .fs-400 {
   font-size: var(--fs-400);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
 }
 
 .mb-2 {
