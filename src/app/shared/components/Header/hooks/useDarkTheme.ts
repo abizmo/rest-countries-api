@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const prefersTheme = window.matchMedia('()').matches;
+const prefersTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const body = document.body;
 
 export const useDarkTheme = (): {
