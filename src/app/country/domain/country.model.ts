@@ -12,3 +12,9 @@ export interface Country {
   languages: string[];
   borders: string[];
 }
+
+export interface TUseCountries {
+  countries: Country[];
+  updateSearch: (text: string) => void;
+  updateFilter: (region: string) => void;
+}
