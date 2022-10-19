@@ -1,3 +1,28 @@
-.filtersContainer {
+.actionsContainer {
   flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.searchContainer {
+  font-size: var(--fs-400);
+  background-color: var(--clr-elements);
+  color: var(--clr-text);
+  padding: 1.1875rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 0.25rem 0.5rem 0 var(--clr-shadow);
+  border-radius: 0.25rem;
+}
+
+.searchContainer input {
+  border: none;
+  background-color: transparent;
+  flex: 1;
+  outline: none;
+}
+
+.searchContainer input::placeholder {
+  color: var(--clr-text);
 }

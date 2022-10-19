@@ -3,6 +3,7 @@ import React from 'react';
 import { Countries } from '../country/components/Countries/Countries';
 import { regions } from '../country/constants';
 import useCountries from '../country/hooks/useCountries';
+import { Filter } from '../shared/components';
 
 import style from './Home.module.css';
 
@@ -11,29 +12,22 @@ const Home = (): JSX.Element => {
 
   return (
     <>
-      <div className={`${style.filtersContainer} flex`}>
-        <label>
+      <div className={`${style.actionsContainer} flex`}>
+        <label className={style.searchContainer}>
           <i className='fa-solid fa-magnifying-glass'></i>
           <input
             type='text'
             name='search'
             id='search'
+            placeholder='Search for a country...'
             onChange={({ target }) => updateSearch(target.value)}
           />
         </label>
-        <select
-          name='region'
-          onChange={({ target }) => updateFilter(target.value)}
-        >
-          <option value='' hidden>
-            Filter by Region
-          </option>
-          {regions.map((region) => (
-            <option key={region} value={region}>
-              {region}
-            </option>
-          ))}
-        </select>
+        <Filter
+          label='Filter by Region'
+          options={regions}
+          onFilter={updateFilter}
+        />
       </div>
       <Countries countries={countries} />
     </>
