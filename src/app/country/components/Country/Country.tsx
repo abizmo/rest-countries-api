@@ -84,9 +84,9 @@ export const Country = (): JSX.Element => {
           <div className={style.countryBorders}>
             <h3 className='medium fs-600'>Border Countries:</h3>
             <div className={style.borders}>
-              {country.borders?.map((border) => (
-                <Button key={border} to={`../country/${border}`}>
-                  {border}
+              {country.borders?.map(({ code, name }) => (
+                <Button key={code} to={`../country/${code}`}>
+                  {name}
                 </Button>
               ))}
             </div>

@@ -1,3 +1,7 @@
+export interface Border {
+  name: string;
+  code: string;
+}
 export interface Country {
   code: string;
   flag: string;
@@ -10,7 +14,7 @@ export interface Country {
   tld: string[];
   currencies: string;
   languages: string[];
-  borders: string[];
+  borders: Border[];
 }
 
 export interface TUseCountries {
