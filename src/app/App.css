@@ -11,6 +11,7 @@
   --clr-text: var(--clr-neutral-900);
   --clr-input: var(--clr-neutral-500);
   --clr-shadow: hsla(200, 15%, 8%, 0.12);
+  --brightness: 0.9;
 
   --ff-sans: 'Nunito Sans', sans-serif;
 
@@ -34,6 +35,7 @@
     --clr-bg: var(--clr-neutral-800);
     --clr-text: var(--clr-neutral-100);
     --clr-shadow: hsla(200, 15%, 8%, 0.6);
+    --brightness: 1.5;
   }
 
   [data-theme='light'] {
@@ -41,6 +43,7 @@
     --clr-bg: var(--clr-neutral-200);
     --clr-text: var(--clr-neutral-900);
     --clr-shadow: hsla(200, 15%, 8%, 0.12);
+    --brightness: 0.9;
   }
 }
 
@@ -49,6 +52,7 @@
   --clr-bg: var(--clr-neutral-800);
   --clr-text: var(--clr-neutral-100);
   --clr-shadow: hsla(200, 15%, 8%, 0.6);
+  --brightness: 1.5;
 }
 
 body {
@@ -113,4 +117,8 @@ body {
 
 .mb-3 {
   margin-bottom: 3rem;
+}
+
+.flex {
+  display: flex;
 }
