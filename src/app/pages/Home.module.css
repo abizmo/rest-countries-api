@@ -1,19 +1,21 @@
 .actionsContainer {
   flex-direction: column;
-  gap: 3rem;
+  gap: 2.5rem;
   margin-bottom: 2.5rem;
+  font-size: var(--fs-300);
 }
 
 .searchContainer {
-  font-size: var(--fs-400);
   background-color: var(--clr-elements);
   color: var(--clr-text);
-  padding: 1.1875rem 2.5rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   box-shadow: 0 0.25rem 0.5rem 0 var(--clr-shadow);
   border-radius: 0.25rem;
+  flex: 1;
+  max-width: 30rem;
 }
 
 .searchContainer input {
@@ -25,4 +27,16 @@
 
 .searchContainer input::placeholder {
   color: var(--clr-text);
+}
+
+@media (min-width: 48em) {
+  .actionsContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    font-size: var(--fs-400);
+  }
+  .searchContainer {
+  }
 }

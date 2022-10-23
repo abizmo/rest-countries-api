@@ -11,7 +11,7 @@ const App = (): JSX.Element => {
   return (
     <>
       <Header />
-      <main>
+      <main className='container'>
         <HashRouter>
           <Routes>
             <Route path='/country/:countryCode' element={<Country />} />
@@ -19,7 +19,6 @@ const App = (): JSX.Element => {
           </Routes>
         </HashRouter>
       </main>
-      <footer>footer</footer>
     </>
   );
 };

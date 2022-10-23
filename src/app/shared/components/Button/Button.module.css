@@ -8,15 +8,26 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.5rem;
-}
-
-.buttonSmall {
+  padding: 0.5rem 1rem;
   font-size: var(--fs-300);
-  min-width: 6rem;
+  width: 6rem;
+  text-align: center;
 }
 
 .buttonBig {
   font-size: var(--fs-400);
-  padding-inline: 1.5rem;
+  height: 2rem;
+  width: 7rem;
+}
+
+@media (min-width: 48em) {
+  .button {
+    font-size: var(--fs-400);
+  }
+
+  .buttonBig {
+    font-size: var(--fs-500);
+    height: 2.5rem;
+    width: 8.5rem;
+  }
 }

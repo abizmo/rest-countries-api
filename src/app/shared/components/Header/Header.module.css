@@ -24,7 +24,7 @@
   color: var(--clr-text);
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 48em) {
   .container {
     padding-inline: 5rem;
     margin-bottom: 5rem;

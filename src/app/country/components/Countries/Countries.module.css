@@ -1,10 +1,9 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 100%;
-  column-gap: 2rem;
-  row-gap: 4rem;
+  gap: 2.5rem;
 }
 
 .card {
@@ -16,7 +15,7 @@
 }
 
 .cardImage {
-  height: 160px;
+  height: 10rem;
   width: 100%;
 }
 
@@ -31,4 +30,18 @@
 
 .cardDetails li:not(:last-child) {
   margin-bottom: 0.25rem;
+}
+
+@media (min-width: 48em) {
+  .container {
+    gap: 4.5rem;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 16.5rem;
+  }
+  .cardImage {
+    height: 10rem;
+  }
 }
