@@ -68,7 +68,9 @@ body {
 /* Utility classes */
 .container {
   margin-inline: auto;
-  width: min(100% - 2rem, 34rem);
+  margin-bottom: 4rem;
+  padding-inline: 1rem;
+  width: 100%;
 }
 
 .visually-hidden {
@@ -121,4 +123,10 @@ body {
 
 .flex {
   display: flex;
+}
+
+@media (min-width: 48em) {
+  .container {
+    padding-inline: 5rem;
+  }
 }
